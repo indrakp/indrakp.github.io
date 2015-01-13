@@ -1,0 +1,1128 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js csstransforms csstransforms3d"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	<title>
+		Creating A Webzine | PDF Flipbook	</title>
+	<link href="/favicon.ico" type="image/x-icon" rel="icon"><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="http://www.youblisher.com/css/960gs/reset.css"><link rel="stylesheet" type="text/css" href="http://www.youblisher.com/css/960gs/960_12_col.css"><link rel="stylesheet" type="text/css" href="/css/css.css"><link rel="stylesheet" type="text/css" href="/css/youblisher.css"><link rel="stylesheet" type="text/css" href="/css/blue2.css"><link rel="stylesheet" type="text/css" href="/css/dropdown.css"><script src="http://www.youblisher.com/js/turnjs/turn.js"></script><script src="http://www.youblisher.com/js/turnjs/zoom.js"></script><script src="http://www.youblisher.com/js/turnjs/magazine.js"></script><link href="http://www.youblisher.com/css/turnjs/magazine.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script><script type="text/javascript" src="http://www.youblisher.com/js/turnjs/modernizr.2.5.3.min.js"></script><script type="text/javascript" src="http://www.youblisher.com/js/turnjs/hash.js"></script><script type="text/javascript" src="http://www.youblisher.com/js/turnjs/scissor.js"></script><script type="text/javascript" src="http://www.youblisher.com/js/turnjs/zoom.js"></script><script type="text/javascript" src="http://www.youblisher.com/js/clickdivs.php?string=page_1,page_2,page_3,page_4"></script>
+</head>
+<body style="overflow: hidden; margin-top: -80px;">
+
+	
+<div id="header-wrapper">
+	<div class="container_12">
+		<div class="grid_4 alpha">
+
+			<h1><a href="/" class="logo">youblisher</a></h1>
+
+		</div>
+		<div class="grid_8 omega" id="header">
+
+			<ul id="header-menu" class="user signed-out">
+	<li id="header-join" class="first-item"><a href="/register" title="Create a free account">Create a free account</a></li>
+	<li><a href="/login" title="Login">Login</a></li>
+</ul>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- below header -->
+<div id="below-header-wrapper">
+	<div class="container_12">
+		<div class="grid_12 alpha omega" id="below-header">
+
+			<div class="search">
+				<form action="/searchit/" method="post">
+					<input placeholder="search publications" id="search-q" name="search" autocomplete="off" type="text">
+					<input id="search-button" value="" type="submit">
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div>
+
+
+
+	
+	<div class="container_12">
+		<div class="grid_12">
+
+						
+		</div>
+	</div>
+
+
+<style>
+.grey {
+	background: #EEEEEE;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 0 10px 0;
+}
+.video_tutorial {
+	background: #EEEEEE;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 0 10px 0;
+}
+.round_box{ color:#333;border:1px solid #BBB;border-bottom:1px solid #999;background:#EEE; background-repeat:repeat-x;background-position:top left;width:100%;margin-bottom:8px;margin-top:8px;padding:0px;-moz-border-radius:5px;-webkit-border-radius:5px;position:relative;}
+.result{ color:#333;border:1px solid #BBB;border-bottom:1px solid #999;background:#EEE;background-image: url(http://www.youblisherr.com/images/search/result.jpg);
+  background-repeat:repeat-x;background-position:top left;white-space:nowrap;overflow:hidden;width:100%;max-height:360px;
+  margin-bottom:8px;margin-top:8px;padding:0px;-moz-border-radius:5px;-webkit-border-radius:5px;position:relative;}
+h2 {margin-top: 25px; font-size: 18px; color: #008fbb; font-weight: bold;}
+
+h1.pages {font-size: 18px; margin: 20px 0;}
+</style>
+
+	<!-- test.newfull.ctp -->
+
+<style type="text/css">
+	
+.magazine-viewport{
+
+	
+			background: url('http://www.youblisher.com/page-flip-catalog/images/abstract_background_light-grey.jpg') no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+				
+}
+	
+.magazine-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:922px;
+	width:353px;
+	height:600px;
+	height:500px;
+	margin:auto;
+}
+
+.magazine-viewport .magazine{
+	width:922px;
+	width:353px;
+	height:600px;
+	height:500px;
+	left:-461px;
+	top:-300px;
+}
+
+.magazine-viewport .page{
+	width:461px;
+	width:177px;
+	height:600px;
+	height:500px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.magazine-viewport .next-button,
+.magazine-viewport .previous-button{
+	width:22px;
+	height:600px;
+	height:500px;
+	position:absolute;
+	top:0;
+}
+
+.magazine-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #111;
+	-moz-box-shadow:0 0 20px #111;
+	-o-box-shadow:0 0 20px #111;
+	-ms-box-shadow:0 0 20px #111;
+	box-shadow:0 0 20px #111;
+}
+
+
+#canvas{
+	/*
+	background: url('http://www.youblisher.com/page-flip-catalog/images/abstract_background_wood.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	*/
+}
+
+</style>
+
+
+
+<div id="canvas" style="display: block;">
+
+
+<!-- <div class="zoom-icon zoom-icon-in"></div> -->
+
+<div class="magazine-viewport" style="position: relative; overflow: hidden; width: 1304px; height: 449px;">
+	<div class="container">
+		<div class="magazine animated" style="position: relative; width: 533.85px; height: 379.05px; top: -214.525px; left: -266.925px; margin-left: 0px;">
+			<!-- Next button -->
+			<div ignore="1" class="next-button" style="height: 379.05px; background-position: -38px 173.525px;"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button" style="display: block; height: 379.05px; background-position: -4px 173.525px;"></div>
+
+		
+		<div class="page-wrapper" page="1" style="position: absolute; overflow: hidden; width: 267px; height: 379px; top: 0px; right: 0px; left: auto; z-index: 0; display: none;">
+		<div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 464px; height: 464px; -webkit-transform-origin: 0% 0%;">
+		</div>
+		<div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px; display: none; background-image: -webkit-gradient(linear, 100% 0%, -19.7163120567376% 5.17663722110367e-15%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));"></div></div><div style="pointer-events: none; position: absolute; top: -10px; left: -385px; overflow: visible; z-index: auto; display: none;"><div style="position: absolute; top: 10px; left: 652px; overflow: hidden; z-index: 0; width: 464px; height: 464px; -webkit-transform-origin: 0% 0%; -webkit-transform: translate(1px, 0px) rotate(90deg); display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 267px; height: 379px; right: 0px; bottom: auto; -webkit-transform-origin: 0% 0%; -webkit-transform: rotate(-90deg) translate(-422px, 0px) rotate(360deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px; background-image: -webkit-gradient(linear, 0% 0%, 99.7635933806147% 4.31386435091973e-15%, color-stop(0.763033, rgba(0, 0, 0, 0)), color-stop(0.952607, rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0)));"></div></div></div><div style="position: absolute; top: 10px; left: 385px; overflow: hidden; z-index: 4; width: 464px; height: 464px; -webkit-transform-origin: 100% 0%; -webkit-transform: translate(-464px, 0px) rotate(-90deg); display: none;"><div style="position: absolute; top: 0px; left: auto; overflow: visible; z-index: auto; cursor: default; width: 267px; height: 379px; right: 0px; bottom: auto; -webkit-transform-origin: 100% 0%; -webkit-transform: rotate(90deg) translate(0px, 0px) rotate(0deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px; background-image: -webkit-gradient(linear, 100% 0%, 100% 0%, from(rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.2)));"></div><div class="page p1 odd" style="float: left; width: 267px; height: 379px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; -webkit-transform-origin: 0% 0%; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px;"><div class="gradient"></div><img src="http://static.youblisher.com/publications/76/452178/large-1.jpg" style="width: 100%; height: 100%;"></div></div></div><div style="position: absolute; top: 10px; left: 652px; overflow: hidden; z-index: 4; display: none; width: 464px; height: 464px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 267px; height: 379px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px;"></div></div></div><div style="position: absolute; top: 41px; left: 191px; overflow: hidden; z-index: 0; display: none; width: 464px; height: 464px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 267px; height: 379px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px;"></div></div></div></div><div class="page-wrapper" page="2" style="position: absolute; overflow: hidden; width: 267px; height: 379px; top: 0px; left: 0px; right: auto; z-index: 4;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 464px; height: 464px; -webkit-transform-origin: 100% 0%;"><div class="page p2 even" style="float: left; width: 267px; height: 379px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; box-shadow: rgba(0, 0, 0, 0) 0px 0px 20px; -webkit-transform-origin: 100% 0%;"><div class="gradient"></div><img src="http://static.youblisher.com/publications/76/452178/large-2.jpg" style="width: 100%; height: 100%;"></div></div></div><div class="page-wrapper" page="3" style="position: absolute; overflow: hidden; width: 267px; height: 379px; top: 0px; right: 0px; left: auto; z-index: 4;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 464px; height: 464px;"><div class="page p3 odd" style="float: left; width: 267px; height: 379px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="http://static.youblisher.com/publications/76/452178/large-3.jpg" style="width: 100%; height: 100%;"></div></div></div><div class="page-wrapper" page="4" style="position: absolute; overflow: hidden; width: 267px; height: 379px; top: 0px; left: 0px; right: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 464px; height: 464px;"><div class="page p4 even" style="float: left; width: 267px; height: 379px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="http://static.youblisher.com/publications/76/452178/large-4.jpg" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 267px; height: 379px;"></div></div>
+		<div class="shadow" style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 534px; height: 379px;"></div></div>
+	</div>
+	<div class="navigation">
+		<div class="navigation-buttons">
+			<div id="firstPage" class="freecons navigationButton firstPage">&nbsp;</div>
+			<div id="previousPage" class="freecons navigationButton previousPage">&nbsp;</div>
+			<div id="nextPage" class="freecons navigationButton nextPage">&nbsp;</div>
+			<div id="lastPage" class="freecons navigationButton lastPage">&nbsp;</div>
+		</div>
+	</div>
+	<div class="navigation-left">
+		<div id="fullscreen" class="fullscreen-icons fullscreen fullscreen-expand">&nbsp;</div>
+		<div id="zoomTo" class="freecons navigationButton zoomIn">&nbsp;</div>
+		<div id="currentPage" class="currentPage">p. 2 / 4</div>
+	</div>
+	<div class="navigation-right">
+		<div class="navigation-buttons">
+						<div id="downloadPdf" class="freecons navigationButton downloadPdf">&nbsp;</div>
+					</div>
+	</div>
+</div>
+
+<style type="text/css">
+	
+.navigation-left{
+	margin:0;
+	padding:0;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 1004444;
+	border: white solid 0px;
+}
+.navigation-right{
+	margin:0;
+	padding:0;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1004444;
+	border: white solid 0px;
+}
+.navigation-buttons{
+	margin:0;
+	padding:0;
+	text-align:center;
+	border: white solid 0px;
+}
+	
+.navigation{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	margin-top:-0px;
+	background-color:#ededed;
+
+	background-color:rgba(0,0,0, 0.6);
+
+
+	z-index: 1002222;
+	position:absolute;
+	bottom:0;
+
+}
+.freecons{
+	background-image:url(/img/turnjs/freecons.png);
+}
+.fullscreen-icons{
+	background-image:url(/img/turnjs/fullscreen-icons.png);
+}
+.navigationButton{
+	background-repeat:no-repeat;
+	display: inline-block;
+
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+
+	border: white solid 0px;
+	cursor:pointer;
+}
+.currentPage{
+	display: inline-block;
+
+	line-height:30px;
+
+	width: 120px;
+	height: 30px;
+	vertical-align: middle;
+
+	color: #000;
+	color: #fff;
+	font-size: 16px;
+	font-weight:strong;
+	
+	
+	border: white solid 0px;
+	text-align: center;
+	font-family: Arial,Helvetica,sans-serif;
+
+}
+.downloadPdf{
+	background-position:-271px -265px;
+}
+.firstPage{
+	background-position:-211px -355px;
+}
+.previousPage{
+	background-position:-271px -355px;
+}
+.nextPage{
+	background-position:-300px -355px;
+}
+.lastPage{
+	background-position:-241px -355px;
+}
+.fullscreen-expand{
+	background-position:-3px -3px;
+/*
+	z-index: 13333;
+	position:absolute;
+	left:10px;
+	bottom:10px;
+	*/
+}
+.fullscreen-contract{
+	background-position:-39px -3px;
+}
+.fullscreen{
+
+	background-repeat:no-repeat;
+	display: inline-block;
+
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	border: white solid 0px;
+	cursor:pointer;
+	margin-right: 5px;
+}
+.zoomTo{
+	background-position:-361px -205px;
+	background-position:-421px -205px;
+}
+.zoomIn{
+	background-position:-421px -205px;
+}
+.zoomOut{
+	background-position:-391px -205px;
+}
+
+</style>
+
+
+</div>
+
+<script type="text/javascript">
+
+
+
+$( "#firstPage" ).click(function() {
+	$( ".magazine" ).turn('page', 1);
+});
+$( "#nextPage" ).click(function() {
+	$( ".magazine" ).turn('next');
+});
+$( "#previousPage" ).click(function() {
+	$( ".magazine" ).turn('previous');
+});
+$( "#lastPage" ).click(function() {
+	$( ".magazine" ).turn('page', $( ".magazine" ).turn('pages'));
+});
+$( "#zoomTo" ).click(function(e) {
+	zoomTo(e);
+
+	if ($(this).hasClass('zoomIn')) {
+		$('#zoomTo').removeClass('zoomIn').addClass('zoomOut');
+	} else if ($(this).hasClass('zoomOut'))	{
+		$('#zoomTo').removeClass('zoomOut').addClass('zoomIn');
+	}
+});
+$( "#downloadPdf" ).click(function(e) {
+	e.preventDefault();  //stop the browser from following
+	window.location.href = 'http://www.youblisher.com/pdf/452178';
+});
+
+
+$('.fullscreen').bind('click', function() {
+	//$('.magazine-viewport').zoom('zoomOut');	
+	if ($(this).hasClass('fullscreen-expand')) {
+		//alert("expand");
+		$('#fullscreen').removeClass('fullscreen-expand').addClass('fullscreen-contract');
+		vollbild();
+	} else if ($(this).hasClass('fullscreen-contract'))	{
+		//alert("contract");
+		$('#fullscreen').removeClass('fullscreen-contract').addClass('fullscreen-expand');
+		vollbild();
+	}
+	//resizeViewport();
+});
+
+function vollbild() {
+	//alert("vollbild");
+		/*
+		alert(
+			"top: " + $('.magazine').css('top') + "\n" + 
+			"offset: " + $('.magazine').offset().top + "\n" + 
+			"position: " + $('.magazine').position().top + "\n" + 
+			"");
+			*/
+
+			//$('.magazine').css('top', $('.magazine').offset().top);
+			//$('.magazine').css('top', $('.magazine').position().top);
+
+	var element = document.getElementById("canvas");
+	//var element = document.getElementsByTagName("body")[0];
+	//var element = $('.magazine-viewport');
+	//ar element = $('#canvas');
+
+	if (element.requestFullScreen) {
+
+		if (!document.fullScreen) {
+			element.requestFullscreen();
+			screenMode = "fullscreen";
+		} else {
+			document.exitFullScreen();
+			screenMode = "normal";
+		}
+
+	} else if (element.mozRequestFullScreen) {
+
+		if (!document.mozFullScreen) {
+			element.mozRequestFullScreen();
+			screenMode = "fullscreen";
+		} else {
+			document.mozCancelFullScreen();
+			screenMode = "normal";
+		}
+
+	} else if (element.webkitRequestFullScreen) {
+
+		if (!document.webkitIsFullScreen) {
+			element.webkitRequestFullScreen();
+			screenMode = "fullscreen";
+		} else {
+			document.webkitCancelFullScreen();
+			screenMode = "normal";
+		}
+
+	} else {
+		//alert("kein vollbild");
+	}
+
+
+}
+
+function checkvollbild() {
+
+	var element = document.getElementById("canvas");
+
+	if (element.requestFullScreen) {
+
+		if (document.fullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else if (element.mozRequestFullScreen) {
+
+		if (document.mozFullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else if (element.webkitRequestFullScreen) {
+
+		if (document.webkitIsFullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else {
+		screenMode = "normal";
+		//alert("kein vollbild");
+	}
+	//alert("screenmode: " + screenMode);
+}
+//document.getElementById("vollbild_link").addEventListener("click", vollbild, false);
+
+var imagePath = "http://static.youblisher.com/publications/76/452178/large-";
+var flashpages = {
+1: {file: '1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+2: {file: '2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+3: {file: '3.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+4: {file: '4.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' }};
+
+// Width of the flipbook when zoomed in
+
+function largeMagazineWidth() {
+	
+	return 1588;
+
+}
+
+var fixedWidth = null;
+var fixedHeight = null;
+var screenMode = "normal";
+function loadApp() {
+
+ 	$('#canvas').fadeIn(1000);
+
+ 	var flipbook = $('.magazine');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+	
+	// Create the flipbook
+	$(".magazine .double").scissor();
+	flipbook.turn({
+
+			
+			// Magazine width
+
+			//width: 1400,
+			width: 706,
+
+			// Magazine height
+
+			//height: 900,
+			height: 500,
+
+			// Duration in millisecond
+
+			duration: 1000,
+
+			// Hardware acceleration
+
+			acceleration: !isChrome(),
+
+			// Enables gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true,
+
+			// Elevation from the edge of the flipbook when turning a page
+
+			elevation: 50,
+
+			// The number of pages
+
+			//pages: 4,
+			pages: 4,
+
+			// Events
+
+			when: {
+				turning: function(event, page, view) {
+					
+					var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+					$( "#currentPage" ).html('p. ' + page + ' / 4');
+
+			
+					// Update the current URI
+
+					//Hash.go('page-' + page).update();
+
+					// Show and hide navigation buttons
+
+					disableControls(page);
+					
+
+					$('.thumbnails .page-'+currentPage).
+						parent().
+						removeClass('current');
+
+					$('.thumbnails .page-'+page).
+						parent().
+						addClass('current');
+
+
+
+				},
+
+				turned: function(event, page, view) {
+
+					disableControls(page);
+
+					$(this).turn('center');
+
+					if (page==1) { 
+						//$(this).turn('peel', 'br');
+						$(this).turn('peel', 'tr');
+					}
+
+				},
+
+				zooming: function (event,  newZoomValue, currentZoomValue) {
+
+
+					//alert("loader 1");
+
+				},
+
+				missing: function (event, pages) {
+
+					// Add pages that aren't in the magazine
+
+					for (var i = 0; i < pages.length; i++)
+						addPage(pages[i], $(this));
+
+				}
+			}
+
+	});
+
+	// Zoom.js
+
+	$('.magazine-viewport').zoom({
+		flipbook: $('.magazine'),
+
+		max: function() { 
+			
+			return largeMagazineWidth()/$('.magazine').width();
+
+		}, 
+
+		when: {
+
+			swipeLeft: function() {
+
+				$(this).zoom('flipbook').turn('next');
+
+			},
+
+			swipeRight: function() {
+				
+				$(this).zoom('flipbook').turn('previous');
+
+			},
+
+			resize: function(event, scale, page, pageElement) {
+
+				if (scale==1) {
+					loadSmallPage(page, pageElement);
+				} else {
+					loadLargePage(page, pageElement);
+				}
+
+			},
+
+			zoomIn: function () {
+
+				// scale the loader to the right position
+				var zoomFactor = largeMagazineWidth()/$('.magazine').width();
+				var top = parseInt(-11+(11 + parseInt($('.loader').css('top')))*zoomFactor);
+				var left = parseInt(-11+(11 + parseInt($('.loader').css('left')))*zoomFactor);
+				$('.loader').css({top: top, left: left});
+
+
+
+				$('.thumbnails').hide();
+				$('.made').hide();
+				$('.magazine').removeClass('animated').addClass('zoom-in');
+				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+				$('#zoomTo').removeClass('zoomIn').addClass('zoomOut');
+
+
+				if (!window.escTip && !$.isTouch) {
+					escTip = true;
+
+					$('<div />', {'class': 'exit-message'}).
+						html('<div>Press ESC to exit</div>').
+							appendTo($('body')).
+							delay(2000).
+							animate({opacity:0}, 500, function() {
+								$(this).remove();
+							});
+				}
+			},
+
+			zoomOut: function () {
+
+				$('.exit-message').hide();
+				$('.thumbnails').fadeIn();
+				$('.made').fadeIn();
+				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+				$('#zoomTo').removeClass('zoomOut').addClass('zoomIn');
+
+				setTimeout(function(){
+					$('.magazine').addClass('animated').removeClass('zoom-in');
+					resizeViewport();
+				}, 0);
+
+			}
+		}
+	});
+
+	// Zoom event
+
+	if ($.isTouch)
+		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+	else
+		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+	// Using arrow keys to turn the page
+
+	$(document).keydown(function(e){
+
+		var previous = 37, up = 38, next = 39, down = 40, esc = 27;
+
+		switch (e.keyCode) {
+			case previous:
+
+				// left arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case up:
+
+				// up arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case next:
+
+				//right arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case down:
+
+				//down arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case esc:
+				
+				$('.magazine-viewport').zoom('zoomOut');	
+				e.preventDefault();
+
+			break;
+		}
+	});
+
+	// URIs - Format #/page/1 
+	/*
+	Hash.on('^page-([0-9]*)$', {
+		yep: function(path, parts) {
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.magazine').turn('is'))
+				$('.magazine').turn('page', 1);
+		}
+	});
+	*/
+
+	if ($('.magazine').turn('is'))
+		$('.magazine').turn('page', 1);
+
+
+	$(window).resize(function() {
+		resizeViewport();
+	}).bind('orientationchange', function() {
+		resizeViewport();
+	});
+
+	// Events for thumbnails
+
+	$('.thumbnails').click(function(event) {
+		
+		var page;
+
+		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+		
+			$('.magazine').turn('page', page[1]);
+		}
+	});
+
+	$('.thumbnails li').
+		bind($.mouseEvents.over, function() {
+			
+			$(this).addClass('thumb-hover');
+
+		}).bind($.mouseEvents.out, function() {
+			
+			$(this).removeClass('thumb-hover');
+
+		});
+
+	if ($.isTouch) {
+	
+		$('.thumbnails').
+			addClass('thumbanils-touch').
+			bind($.mouseEvents.move, function(event) {
+				event.preventDefault();
+			});
+
+	} else {
+
+		$('.thumbnails ul').mouseover(function() {
+
+			$('.thumbnails').addClass('thumbnails-hover');
+
+		}).mousedown(function() {
+
+			return false;
+
+		}).mouseout(function() {
+
+			$('.thumbnails').removeClass('thumbnails-hover');
+
+		});
+
+	}
+
+	/*
+	// Regions
+
+	if ($.isTouch) {
+		$('.magazine').bind('touchstart', regionClick);
+	} else {
+		$('.magazine').click(regionClick);
+	}
+	*/
+
+	// Events for the next button
+
+	$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+
+	resizeViewport();
+
+	$('.magazine').addClass('animated');
+
+}
+
+// Zoom icon
+
+ $('.zoom-icon').bind('mouseover', function() { 
+ 	
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).addClass('zoom-icon-in-hover');
+
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).addClass('zoom-icon-out-hover');
+ 
+ }).bind('mouseout', function() { 
+ 	
+ 	 if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).removeClass('zoom-icon-in-hover');
+ 	
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).removeClass('zoom-icon-out-hover');
+
+ }).bind('click', function() {
+
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$('.magazine-viewport').zoom('zoomIn');
+ 	else if ($(this).hasClass('zoom-icon-out'))	
+		$('.magazine-viewport').zoom('zoomOut');
+
+ });
+
+ $('#canvas').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['http://www.youblisher.com/js/turnjs/turn.js'],
+	nope: ['http://www.youblisher.com/js/turnjs/turn.html4.min.js'],
+	//both: ['http://www.youblisher.com/js/turnjs/zoom.min.js', 'http://www.youblisher.com/js/turnjs/magazine.js', 'http://www.youblisher.com/css/turnjs/magazine.css'],
+	both: ['http://www.youblisher.com/js/turnjs/zoom.js', 'http://www.youblisher.com/js/turnjs/magazine.js', 'http://www.youblisher.com/css/turnjs/magazine.css'],
+	complete: loadApp
+});
+
+</script>
+
+	
+
+
+<script type="text/javascript">
+<!--
+
+	// headerDiv -80; view-port screenSize; view-port "waiting"; scrollDown -Up = seitenbl�ttern
+
+	//alert($(window).width() + " - " + $(window).height());
+
+
+	document.getElementById("canvas").style.width = window.innerWidth;
+	document.getElementById("canvas").style.height = window.innerHeight;
+
+
+
+
+	$("body").css("overflow", "hidden");
+	$("body").css("marginTop", "-80px");
+
+	window.addEventListener("keydown", function(e) {
+		// space and arrow keys
+		if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+			e.preventDefault();
+		}
+	}, false);
+
+
+$(window).bind({
+     load:function(){
+		//window.scroll(0,80);
+     },
+     resize:function(){
+
+     },
+     scroll:function(){
+
+    }
+});
+
+
+//-->
+</script>
+
+
+
+<style>
+	div.search_it {padding: 10px; padding-top: 3px; display:none; border: 0px solid #FF0084;}
+</style>
+
+				
+<div style="background-color: #f7f7f7; width: 100%; margin-top:3000px;">
+<div class="container_12">
+<div class="grid_12">
+
+
+<style>
+div.grey {
+	background: #EEEEEE;
+	text-align: left;
+	padding: 10px;
+	float: left;
+	width: 928px;
+	margin: 5px 0 25px 0;
+}
+h2 {margin-top: 25px; font-size: 18px; color: #008fbb; font-weight: bold;}
+</style>
+<div class="layoutwrapper">
+	<h2>Embed or link this publication</h2>
+	<div class="grey">
+		<form name="formtocopy" action="">
+		<!-- <a href="javascript:copy(document.formtocopy.htmllinktocopy);" class="copylink" rel="nofollow">Click here to Copy the Link to this Publication</a> -->
+		<input name="htmllinktocopy" style="width:900px; padding: 3px; font-size: 15px;" type="text" class="copylink" value="http://www.youblisher.com/p/452178-Creating-A-Webzine/">
+		</form>			
+	</div>
+</div>
+
+<div class="layoutwrapper">
+	<h2>Description</h2>
+	<div class="grey">
+		Y9 Instructions 	</div>
+</div>
+
+
+
+
+<style>
+.thumbs {
+	border: solid 2px green;
+	margin: 5px 5px 5px 5px;
+	display: inline;
+}
+#poppages {
+	list-style-type: none;
+	margin: 0;
+	clear: both;
+}
+</style>
+
+		<style>
+			.cover {background:url('http://static.youblisher.com/img/cover-bg.png') no-repeat right bottom; padding: 0 8px 3px 0; display:inline; border: solid 0px black;float:left;margin:3px;}
+		</style>
+
+
+
+<div class="layoutwrapper">
+	<h2>Popular Pages</h2>
+	<div class="grey">
+		<ul id="poppages">
+					<li class="cover" style="border:none;"><a href="javascript:switchid('page_1');"><img src="http://static.youblisher.com/publications/76/452178/tn-1.jpg" border="0"></a></li>
+					<li class="cover" style="border:none;"><a href="javascript:switchid('page_2');"><img src="http://static.youblisher.com/publications/76/452178/tn-2.jpg" border="0"></a></li>
+					<li class="cover" style="border:none;"><a href="javascript:switchid('page_3');"><img src="http://static.youblisher.com/publications/76/452178/tn-3.jpg" border="0"></a></li>
+					<li class="cover" style="border:none;"><a href="javascript:switchid('page_4');"><img src="http://static.youblisher.com/publications/76/452178/tn-4.jpg" border="0"></a></li>
+				</ul>
+		<br class="clear">
+	</div>
+</div>
+
+
+<div class="layoutwrapper">
+			<div class="search_it grey" id="page_1">
+			<p align="left">
+			</p><h1 class="normal">p. 1</h1>	
+				creating a webzine			<br><br>
+			<p></p>
+			<a href="javascript:hideallids()">[close]</a>
+		</div>
+			<div class="search_it grey" id="page_2">
+			<p align="left">
+			</p><h1 class="normal">p. 2</h1>	
+				what is a webzine a webzine is an online magazine in the late 1990s webzine publishers began adapting to the interactive and informative qualities of the internet instead of simply duplicating print magazines on the web publishers of traditional print titles and entrepreneurs with an eye to a potential readership in the millions started publishing online titles from wikipedia			<br><br>
+			<p></p>
+			<a href="javascript:hideallids()">[close]</a>
+		</div>
+			<div class="search_it grey" id="page_3">
+			<p align="left">
+			</p><h1 class="normal">p. 3</h1>	
+				a webzine example with twitter facebook blogs and podcasts dominating today s news industry it comes as little surprise that webzines have also emerged as an example of citizen journalism in action citizen journalism means you a webzine a magazine that is entirely online performs many of the traditional functions of a typical magazine or newspaper in printed form they are often focused on a specific audience about a certain topic theme or issue through the use of text graphics and more recently multimedia features such as slideshows and video.			<br><br>
+			<p></p>
+			<a href="javascript:hideallids()">[close]</a>
+		</div>
+			<div class="search_it grey" id="page_4">
+			<p align="left">
+			</p><h1 class="normal">p. 4</h1>	
+				the task your job in the next few weeks is to create your own webzine you can include quotes images cartoons poems fast facts top tens lists etc the choice is yours but  you must include one creative writing piece the webzine is the tool for showing off this piece of writing.			<br><br>
+			<p></p>
+			<a href="javascript:hideallids()">[close]</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="layoutwrapper">
+	<h2>Comments</h2>
+	<div class="grey">
+		no comments yet		
+	</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3616536-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body></html>

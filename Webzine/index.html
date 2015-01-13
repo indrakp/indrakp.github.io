@@ -1,0 +1,966 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js csstransforms csstransforms3d"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	<title>
+		Creating A Webzine | PDF Flipbook	</title>
+	<link href="/favicon.ico" type="image/x-icon" rel="icon">
+	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/960_12_col.css">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<link rel="stylesheet" type="text/css" href="css/youblisher.css">
+<link rel="stylesheet" type="text/css" href="css/blue2.css">
+<link rel="stylesheet" type="text/css" href="css/dropdown.css">
+<script src="js/turn.js"></script>
+<script src="js/zoom.js"></script>
+<script src="js/magazine.js"></script>
+<link href="css/magazine.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="js/hash.js"></script>
+<script type="text/javascript" src="js/scissor.js"></script>
+<script type="text/javascript" src="js/zoom.js"></script>
+</head>
+<body style="overflow: hidden;">
+
+<div>
+
+	<div class="container_12">
+		<div class="grid_12">
+			<!-- CODE GOES HERE -->
+		</div>
+	</div>
+
+<style>
+.grey {
+	background: #EEEEEE;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 0 10px 0;
+}
+.video_tutorial {
+	background: #EEEEEE;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 0 10px 0;
+}
+.round_box{ color:#333;border:1px solid #BBB;border-bottom:1px solid #999;background:#EEE; background-repeat:repeat-x;background-position:top left;width:100%;margin-bottom:8px;margin-top:8px;padding:0px;-moz-border-radius:5px;-webkit-border-radius:5px;position:relative;}
+.result{ color:#333;border:1px solid #BBB;border-bottom:1px solid #999;background:#EEE;background-image: url(http://www.youblisherr.com/images/search/result.jpg);
+  background-repeat:repeat-x;background-position:top left;white-space:nowrap;overflow:hidden;width:100%;max-height:360px;
+  margin-bottom:8px;margin-top:8px;padding:0px;-moz-border-radius:5px;-webkit-border-radius:5px;position:relative;}
+h2 {margin-top: 25px; font-size: 18px; color: #008fbb; font-weight: bold;}
+
+h1.pages {font-size: 18px; margin: 20px 0;}
+</style>
+
+<style type="text/css">
+	
+.magazine-viewport{
+
+	
+			background: url('images/abstract_background_light-grey.jpg') no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+				
+}
+	
+.magazine-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:922px;
+	width:353px;
+	height:600px;
+	height:500px;
+	margin:auto;
+}
+
+.magazine-viewport .magazine{
+	width:922px;
+	width:353px;
+	height:600px;
+	height:500px;
+	left:-461px;
+	top:-300px;
+}
+
+.magazine-viewport .page{
+	width:461px;
+	width:177px;
+	height:600px;
+	height:500px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.magazine-viewport .next-button,
+.magazine-viewport .previous-button{
+	width:22px;
+	height:600px;
+	height:500px;
+	position:absolute;
+	top:0;
+}
+
+.magazine-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #111;
+	-moz-box-shadow:0 0 20px #111;
+	-o-box-shadow:0 0 20px #111;
+	-ms-box-shadow:0 0 20px #111;
+	box-shadow:0 0 20px #111;
+}
+
+
+#canvas{
+	/*
+	background: url('/images/abstract_background_wood.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	*/
+}
+
+</style>
+
+
+
+<div id="canvas" style="display: block;">
+<!-- <div class="zoom-icon zoom-icon-in"></div> -->
+
+<div class="magazine-viewport" style="position: relative; overflow: hidden; height: 681px;">
+	<div class="container">
+		<div class="magazine" style="position: relative; width: 555.7px; height: 394.25px; margin-left: 138.75px; top: -222.125px; left: -277.85px;">
+			<!-- Next button -->
+			<div ignore="1" class="next-button" style="height: 394.25px; display: none; background-position: -38px 181.125px;"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button" style="display: block; height: 394.25px; background-position: -4px 181.125px;"></div>
+		</div>
+	</div>
+	<div class="navigation">
+		<div class="navigation-buttons">
+			<div id="firstPage" class="freecons navigationButton firstPage">&nbsp;</div>
+			<div id="previousPage" class="freecons navigationButton previousPage">&nbsp;</div>
+			<div id="nextPage" class="freecons navigationButton nextPage">&nbsp;</div>
+			<div id="lastPage" class="freecons navigationButton lastPage">&nbsp;</div>
+		</div>
+	</div>
+	<div class="navigation-left">
+		<div id="fullscreen" class="fullscreen-icons fullscreen fullscreen-expand">&nbsp;</div>
+		<div id="zoomTo" class="freecons navigationButton zoomIn">&nbsp;</div>
+		<div id="currentPage" class="currentPage">Fisrt page</div>
+	</div>
+</div>
+
+<style type="text/css">
+	
+.navigation-left{
+	margin:0;
+	padding:0;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 1004444;
+	border: white solid 0px;
+}
+.navigation-right{
+	margin:0;
+	padding:0;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1004444;
+	border: white solid 0px;
+}
+.navigation-buttons{
+	margin:0;
+	padding:0;
+	text-align:center;
+	border: white solid 0px;
+}
+	
+.navigation{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	margin-top:-0px;
+	background-color:#ededed;
+
+	background-color:rgba(0,0,0, 0.6);
+
+
+	z-index: 1002222;
+	position:absolute;
+	bottom:0;
+
+}
+.freecons{
+	background-image:url(images/freecons.png);
+}
+.fullscreen-icons{
+	background-image:url(images/fullscreen-icons.png);
+}
+.navigationButton{
+	background-repeat:no-repeat;
+	display: inline-block;
+
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+
+	border: white solid 0px;
+	cursor:pointer;
+}
+.currentPage{
+	display: inline-block;
+
+	line-height:30px;
+
+	width: 120px;
+	height: 30px;
+	vertical-align: middle;
+
+	color: #000;
+	color: #fff;
+	font-size: 16px;
+	font-weight:strong;
+	
+	
+	border: white solid 0px;
+	text-align: center;
+	font-family: Arial,Helvetica,sans-serif;
+
+}
+.downloadPdf{
+	background-position:-271px -265px;
+}
+.firstPage{
+	background-position:-211px -355px;
+}
+.previousPage{
+	background-position:-271px -355px;
+}
+.nextPage{
+	background-position:-300px -355px;
+}
+.lastPage{
+	background-position:-241px -355px;
+}
+.fullscreen-expand{
+	background-position:-3px -3px;
+/*
+	z-index: 13333;
+	position:absolute;
+	left:10px;
+	bottom:10px;
+	*/
+}
+.fullscreen-contract{
+	background-position:-39px -3px;
+}
+.fullscreen{
+
+	background-repeat:no-repeat;
+	display: inline-block;
+
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	border: white solid 0px;
+	cursor:pointer;
+	margin-right: 5px;
+}
+.zoomTo{
+	background-position:-361px -205px;
+	background-position:-421px -205px;
+}
+.zoomIn{
+	background-position:-421px -205px;
+}
+.zoomOut{
+	background-position:-391px -205px;
+}
+
+</style>
+
+
+</div>
+
+<script type="text/javascript">
+
+$( "#firstPage" ).click(function() {
+	$( ".magazine" ).turn('page', 1);
+});
+$( "#nextPage" ).click(function() {
+	$( ".magazine" ).turn('next');
+});
+$( "#previousPage" ).click(function() {
+	$( ".magazine" ).turn('previous');
+});
+$( "#lastPage" ).click(function() {
+	$( ".magazine" ).turn('page', $( ".magazine" ).turn('pages'));
+});
+$( "#zoomTo" ).click(function(e) {
+	zoomTo(e);
+
+	if ($(this).hasClass('zoomIn')) {
+		$('#zoomTo').removeClass('zoomIn').addClass('zoomOut');
+	} else if ($(this).hasClass('zoomOut'))	{
+		$('#zoomTo').removeClass('zoomOut').addClass('zoomIn');
+	}
+});
+$( "#downloadPdf" ).click(function(e) {
+	e.preventDefault();  //stop the browser from following
+	window.location.href = 'http://www.youblisher.com/pdf/452178';
+});
+
+
+$('.fullscreen').bind('click', function() {
+	//$('.magazine-viewport').zoom('zoomOut');	
+	if ($(this).hasClass('fullscreen-expand')) {
+		//alert("expand");
+		$('#fullscreen').removeClass('fullscreen-expand').addClass('fullscreen-contract');
+		vollbild();
+	} else if ($(this).hasClass('fullscreen-contract'))	{
+		//alert("contract");
+		$('#fullscreen').removeClass('fullscreen-contract').addClass('fullscreen-expand');
+		vollbild();
+	}
+	//resizeViewport();
+});
+
+function vollbild() {
+	//alert("vollbild");
+		/*
+		alert(
+			"top: " + $('.magazine').css('top') + "\n" + 
+			"offset: " + $('.magazine').offset().top + "\n" + 
+			"position: " + $('.magazine').position().top + "\n" + 
+			"");
+			*/
+
+			//$('.magazine').css('top', $('.magazine').offset().top);
+			//$('.magazine').css('top', $('.magazine').position().top);
+
+	var element = document.getElementById("canvas");
+	//var element = document.getElementsByTagName("body")[0];
+	//var element = $('.magazine-viewport');
+	//ar element = $('#canvas');
+
+	if (element.requestFullScreen) {
+
+		if (!document.fullScreen) {
+			element.requestFullscreen();
+			screenMode = "fullscreen";
+		} else {
+			document.exitFullScreen();
+			screenMode = "normal";
+		}
+
+	} else if (element.mozRequestFullScreen) {
+
+		if (!document.mozFullScreen) {
+			element.mozRequestFullScreen();
+			screenMode = "fullscreen";
+		} else {
+			document.mozCancelFullScreen();
+			screenMode = "normal";
+		}
+
+	} else if (element.webkitRequestFullScreen) {
+
+		if (!document.webkitIsFullScreen) {
+			element.webkitRequestFullScreen();
+			screenMode = "fullscreen";
+		} else {
+			document.webkitCancelFullScreen();
+			screenMode = "normal";
+		}
+
+	} else {
+		//alert("kein vollbild");
+	}
+
+
+}
+
+function checkvollbild() {
+
+	var element = document.getElementById("canvas");
+
+	if (element.requestFullScreen) {
+
+		if (document.fullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else if (element.mozRequestFullScreen) {
+
+		if (document.mozFullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else if (element.webkitRequestFullScreen) {
+
+		if (document.webkitIsFullScreen) {
+			screenMode = "fullscreen";
+		} else {
+			screenMode = "normal";
+		}
+
+	} else {
+		screenMode = "normal";
+		//alert("kein vollbild");
+	}
+	//alert("screenmode: " + screenMode);
+}
+//document.getElementById("vollbild_link").addEventListener("click", vollbild, false);
+
+var imagePath = "images/brochure/";
+var flashpages = {
+1: {file: '1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+2: {file: '2-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+3: {file: '2-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+4: {file: '3-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+5: {file: '3-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+6: {file: '4-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+7: {file: '4-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+8: {file: '5-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+9: {file: '5-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+10: {file: '6-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+11: {file: '6-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+12: {file: '7-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+13: {file: '7-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+14: {file: '8-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+15: {file: '8-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+16: {file: '9-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+17: {file: '9-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+18: {file: '10-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+19: {file: '10-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+20: {file: '11-1.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' },
+21: {file: '11-2.jpg', wide: 'n', width: '353', height: '500', version: 'jpg' }};
+var bookPageNumber = 21;
+// Width of the flipbook when zoomed in
+
+function largeMagazineWidth() {
+	
+	return 1588;
+
+}
+
+var fixedWidth = null;
+var fixedHeight = null;
+var screenMode = "normal";
+function loadApp() {
+
+ 	$('#canvas').fadeIn(1000);
+
+ 	var flipbook = $('.magazine');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+	
+	// Create the flipbook
+	$(".magazine .double").scissor();
+	flipbook.turn({
+
+			
+			// Magazine width
+
+			//width: 1400,
+			width: 706,
+
+			// Magazine height
+
+			//height: 900,
+			height: 500,
+
+			// Duration in millisecond
+
+			duration: 1000,
+
+			// Hardware acceleration
+
+			acceleration: !isChrome(),
+
+			// Enables gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true,
+
+			// Elevation from the edge of the flipbook when turning a page
+
+			elevation: 50,
+
+			// The number of pages
+
+			//pages: 4,
+			pages: bookPageNumber,
+
+			// Events
+
+			when: {
+				turning: function(event, page, view) {
+					
+					var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+					$( "#currentPage" ).html('p. ' + page + ' / ' + pages);
+
+			
+					// Update the current URI
+
+					//Hash.go('page-' + page).update();
+
+					// Show and hide navigation buttons
+
+					disableControls(page);
+					
+
+					$('.thumbnails .page-'+currentPage).
+						parent().
+						removeClass('current');
+
+					$('.thumbnails .page-'+page).
+						parent().
+						addClass('current');
+
+
+
+				},
+
+				turned: function(event, page, view) {
+
+					disableControls(page);
+
+					$(this).turn('center');
+
+					if (page==1) { 
+						//$(this).turn('peel', 'br');
+						$(this).turn('peel', 'tr');
+					}
+
+				},
+
+				zooming: function (event,  newZoomValue, currentZoomValue) {
+
+
+					//alert("loader 1");
+
+				},
+
+				missing: function (event, pages) {
+
+					// Add pages that aren't in the magazine
+
+					for (var i = 0; i < pages.length; i++)
+						addPage(pages[i], $(this));
+
+				}
+			}
+
+	});
+
+	// Zoom.js
+
+	$('.magazine-viewport').zoom({
+		flipbook: $('.magazine'),
+
+		max: function() { 
+			
+			return largeMagazineWidth()/$('.magazine').width();
+
+		}, 
+
+		when: {
+
+			swipeLeft: function() {
+
+				$(this).zoom('flipbook').turn('next');
+
+			},
+
+			swipeRight: function() {
+				
+				$(this).zoom('flipbook').turn('previous');
+
+			},
+
+			resize: function(event, scale, page, pageElement) {
+
+				if (scale==1) {
+					loadSmallPage(page, pageElement);
+				} else {
+					loadLargePage(page, pageElement);
+				}
+
+			},
+
+			zoomIn: function () {
+
+				// scale the loader to the right position
+				var zoomFactor = largeMagazineWidth()/$('.magazine').width();
+				var top = parseInt(-11+(11 + parseInt($('.loader').css('top')))*zoomFactor);
+				var left = parseInt(-11+(11 + parseInt($('.loader').css('left')))*zoomFactor);
+				$('.loader').css({top: top, left: left});
+
+
+
+				$('.thumbnails').hide();
+				$('.made').hide();
+				$('.magazine').removeClass('animated').addClass('zoom-in');
+				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+				$('#zoomTo').removeClass('zoomIn').addClass('zoomOut');
+
+
+				if (!window.escTip && !$.isTouch) {
+					escTip = true;
+
+					$('<div />', {'class': 'exit-message'}).
+						html('<div>Press ESC to exit</div>').
+							appendTo($('body')).
+							delay(2000).
+							animate({opacity:0}, 500, function() {
+								$(this).remove();
+							});
+				}
+			},
+
+			zoomOut: function () {
+
+				$('.exit-message').hide();
+				$('.thumbnails').fadeIn();
+				$('.made').fadeIn();
+				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+				$('#zoomTo').removeClass('zoomOut').addClass('zoomIn');
+
+				setTimeout(function(){
+					$('.magazine').addClass('animated').removeClass('zoom-in');
+					resizeViewport();
+				}, 0);
+
+			}
+		}
+	});
+
+	// Zoom event
+
+	if ($.isTouch)
+		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+	else
+		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+	// Using arrow keys to turn the page
+
+	$(document).keydown(function(e){
+
+		var previous = 37, up = 38, next = 39, down = 40, esc = 27;
+
+		switch (e.keyCode) {
+			case previous:
+
+				// left arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case up:
+
+				// up arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case next:
+
+				//right arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case down:
+
+				//down arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case esc:
+				
+				$('.magazine-viewport').zoom('zoomOut');	
+				e.preventDefault();
+
+			break;
+		}
+	});
+
+	// URIs - Format #/page/1 
+	/*
+	Hash.on('^page-([0-9]*)$', {
+		yep: function(path, parts) {
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.magazine').turn('is'))
+				$('.magazine').turn('page', 1);
+		}
+	});
+	*/
+
+	if ($('.magazine').turn('is'))
+		$('.magazine').turn('page', 1);
+
+
+	$(window).resize(function() {
+		resizeViewport();
+	}).bind('orientationchange', function() {
+		resizeViewport();
+	});
+
+	// Events for thumbnails
+
+	$('.thumbnails').click(function(event) {
+		
+		var page;
+
+		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+		
+			$('.magazine').turn('page', page[1]);
+		}
+	});
+
+	$('.thumbnails li').
+		bind($.mouseEvents.over, function() {
+			
+			$(this).addClass('thumb-hover');
+
+		}).bind($.mouseEvents.out, function() {
+			
+			$(this).removeClass('thumb-hover');
+
+		});
+
+	if ($.isTouch) {
+	
+		$('.thumbnails').
+			addClass('thumbanils-touch').
+			bind($.mouseEvents.move, function(event) {
+				event.preventDefault();
+			});
+
+	} else {
+
+		$('.thumbnails ul').mouseover(function() {
+
+			$('.thumbnails').addClass('thumbnails-hover');
+
+		}).mousedown(function() {
+
+			return false;
+
+		}).mouseout(function() {
+
+			$('.thumbnails').removeClass('thumbnails-hover');
+
+		});
+
+	}
+
+	/*
+	// Regions
+
+	if ($.isTouch) {
+		$('.magazine').bind('touchstart', regionClick);
+	} else {
+		$('.magazine').click(regionClick);
+	}
+	*/
+
+	// Events for the next button
+
+	$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+
+	resizeViewport();
+
+	$('.magazine').addClass('animated');
+
+}
+
+// Zoom icon
+
+ $('.zoom-icon').bind('mouseover', function() { 
+ 	
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).addClass('zoom-icon-in-hover');
+
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).addClass('zoom-icon-out-hover');
+ 
+ }).bind('mouseout', function() { 
+ 	
+ 	 if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).removeClass('zoom-icon-in-hover');
+ 	
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).removeClass('zoom-icon-out-hover');
+
+ }).bind('click', function() {
+
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$('.magazine-viewport').zoom('zoomIn');
+ 	else if ($(this).hasClass('zoom-icon-out'))	
+		$('.magazine-viewport').zoom('zoomOut');
+
+ });
+
+ $('#canvas').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['js/turn.js'],
+	nope: ['js/turn.html4.min.js'],
+	both: ['js/zoom.js', 'js/magazine.js', 'css/magazine.css'],
+	complete: loadApp
+});
+
+</script>
+
+	
+
+
+<script type="text/javascript">
+<!--
+
+	// headerDiv -80; view-port screenSize; view-port "waiting"; scrollDown -Up = seitenbl�ttern
+
+	//alert($(window).width() + " - " + $(window).height());
+
+
+	//document.getElementById("canvas").style.width = window.innerWidth;
+	//document.getElementById("canvas").style.height = window.innerHeight;
+
+	$("body").css("overflow", "hidden");
+
+	window.addEventListener("keydown", function(e) {
+		// space and arrow keys
+		if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+			e.preventDefault();
+		}
+	}, false);
+
+
+$(window).bind({
+     load:function(){
+		//window.scroll(0,80);
+     },
+     resize:function(){
+
+     },
+     scroll:function(){
+
+    }
+});
+
+
+//-->
+</script>
+
+
+
+<style>
+	div.search_it {padding: 10px; padding-top: 3px; display:none; border: 0px solid #FF0084;}
+</style>
+
+	
+
+
+</div>
+
+
+
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3616536-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
